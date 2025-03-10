@@ -55,6 +55,8 @@ exports.createServer = () => {
       };
 
       res.statusCode = 400;
+      res.statusMessage = 'Bad Request';
+
       res.end(JSON.stringify(data));
 
       return;
@@ -72,6 +74,7 @@ exports.createServer = () => {
 
     res.statusCode = 200;
     res.statusMessage = 'OK';
+
     res.end(JSON.stringify(responseData));
   });
 
